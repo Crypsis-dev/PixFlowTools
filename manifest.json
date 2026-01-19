@@ -1,0 +1,18 @@
+{
+    "name": "PixFlowTools - Image & PDF Editor",
+    "short_name": "PixFlowTools",
+    "description": "Free, private image and PDF tools that work 100% in your browser",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#4361ee",
+    "theme_color": "#4361ee",
+    "icons": [
+        {
+            "src": "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%234361ee%22>🛠️</text></svg>",
+            "sizes": "any",
+            "type": "image/svg+xml"
+        }
+    ],
+    "categories": ["productivity", "utilities"],
+    "orientation": "portrait"
+}
