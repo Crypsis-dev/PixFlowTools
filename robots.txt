@@ -1,11 +1,10 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://pixflowtools.com/sitemap.xml
-
-# SEO directives
 Disallow: /private/
-Disallow: /tmp/
+Disallow: /admin/
 
-# Crawl-delay for bots (optional)
+Sitemap: https://picmagicpro.com/sitemap.xml
+
+User-agent: Googlebot
+Allow: /
 Crawl-delay: 1
