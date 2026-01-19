@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image to PDF Converter | PixelPerfect Pro - Convert Images to PDF Online</title>
+    <meta name="description" content="Convert JPG, PNG, WebP images to high-quality PDF documents. Multiple images create multi-page PDF. Works 100% in browser - no uploads, no watermarks.">
+    <meta name="keywords" content="image to pdf converter, jpg to pdf, png to pdf, convert image to pdf, multiple images to pdf">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .tool-hero {
+            background: linear-gradient(135deg, rgba(79, 70, 229, 0.1) 0%, rgba(124, 58, 237, 0.1) 100%);
+        }
+        
+        .tool-stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+            justify-content: center;
+        }
+        
+        .tool-stat {
+            text-align: center;
+            padding: 1rem;
+            background: white;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow);
+        }
+        
+        .dark .tool-stat {
+            background: var(--dark-light);
+        }
+        
+        .tool-stat-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: block;
+        }
+        
+        .dark .tool-stat-number {
+            color: var(--primary-light);
+        }
+        
+        .tool-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .tool-step {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: var(--radius-lg);
+            transition: var(--transition);
+        }
+        
+        .dark .tool-step {
+            background: var(--dark-light);
+        }
+        
+        .tool-step:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .step-number {
+            width: 3rem;
+            height: 3rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-weight: 700;
+        }
+        
+        .format-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        
+        .format-badge {
+            background: var(--primary-light);
+            color: var(--primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+        
+        .dark .format-badge {
+            background: rgba(79, 70, 229, 0.2);
+            color: var(--primary-light);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <span>P³</span>
+                </div>
+                <div class="logo-text">
+                    <a href="../index.html" style="text-decoration: none;">
+                        <h1 class="text-gradient">PixelPerfect Pro</h1>
+                    </a>
+                    <p>Professional Image & PDF Tools</p>
+                </div>
+            </div>
+            
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="../index.html#tools" class="nav-link">Tools</a>
+                <a href="../pages/about.html" class="nav-link">About</a>
+                <a href="../pages/contact.html" class="nav-link">Contact</a>
+                <div class="nav-buttons">
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <a href="#convert" class="btn btn-primary">
+                        <i class="fas fa-play"></i> Convert Now
+                    </a>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-btn hidden" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Tool Hero -->
+    <section class="tool-hero">
+        <div class="container">
+            <div class="tool-header">
+                <div class="tool-breadcrumb">
+                    <a href="../index.html">Home</a> / 
+                    <a href="../index.html#tools">Tools</a> / 
+                    <span>Image to PDF Converter</span>
+                </div>
+                <h1>Image to PDF Converter</h1>
+                <p class="tool-description">
+                    Convert JPG, PNG, WebP, BMP, and TIFF images to high-quality PDF documents. 
+                    Multiple images create multi-page PDFs. Works 100% in your browser.
+                </p>
+                
+                <div class="tool-stats">
+                    <div class="tool-stat">
+                        <span class="tool-stat-number">100%</span>
+                        <span>Client-Side</span>
+                    </div>
+                    <div class="tool-stat">
+                        <span class="tool-stat-number">∞</span>
+                        <span>No Limits</span>
+                    </div>
+                    <div class="tool-stat">
+                        <span class="tool-stat-number">⚡</span>
+                        <span>Instant</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ad Unit -->
+    <div class="container">
+        <div class="ad-unit">
+            <div class="ad-label">Support Free Tools</div>
+            <div class="ad-placeholder">
+                <i class="fas fa-ad text-4xl text-gray-300 mb-2"></i>
+                <p class="text-sm text-gray-500">Advertisement</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- How It Works -->
+    <section class="container">
+        <div class="tool-steps">
+            <div class="tool-step">
+                <div class="step-number">1</div>
+                <h3>Upload Images</h3>
+                <p>Select or drag & drop your images. Multiple images are supported.</p>
+            </div>
+            <div class="tool-step">
+                <div class="step-number">2</div>
+                <h3>Customize Settings</h3>
+                <p>Choose page size, orientation, margins, and image quality.</p>
+            </div>
+            <div class="tool-step">
+                <div class="step-number">3</div>
+                <h3>Download PDF</h3>
+                <p>Get your high-quality PDF instantly. No watermarks, no limits.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tool Interface -->
+    <section id="convert" class="tool-interface">
+        <div class="container">
+            <div class="interface-container">
+                <!-- Input Section -->
+                <div class="input-section">
+                    <h3>Upload Images</h3>
+                    <div class="upload-area" id="uploadArea">
+                        <div class="upload-icon">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                        </div>
+                        <h4>Drop images here or click to browse</h4>
+                        <p class="text-gray-600 dark:text-gray-400">
+                            Supports JPG, PNG, WebP, BMP, TIFF
+                        </p>
+                        <input type="file" id="fileInput" accept="image/*" multiple style="display: none;">
+                    </div>
+                    
+                    <div class="file-list" id="fileList"></div>
+                    
+                    <div class="controls">
+                        <div class="control-group">
+                            <label for="pageSize">Page Size</label>
+                            <select id="pageSize">
+                                <option value="a4">A4 (210 × 297 mm)</option>
+                                <option value="letter">Letter (8.5 × 11 in)</option>
+                                <option value="legal">Legal (8.5 × 14 in)</option>
+                                <option value="a3">A3 (297 × 420 mm)</option>
+                                <option value="a5">A5 (148 × 210 mm)</option>
+                                <option value="fit">Fit to Image</option>
+                            </select>
+                        </div>
+                        
+                        <div class="control-group">
+                            <label for="orientation">Orientation</label>
+                            <select id="orientation">
+                                <option value="portrait">Portrait</option>
+                                <option value="landscape">Landscape</option>
+                                <option value="auto">Auto (Based on Image)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="control-group">
+                            <label for="margin">Margin: <span id="marginValue">10 mm</span></label>
+                            <input type="range" id="margin" min="0" max="50" value="10" step="1">
+                        </div>
+                        
+                        <div class="control-group">
+                            <label for="imageQuality">Image Quality: <span id="qualityValue">90%</span></label>
+                            <input type="range" id="imageQuality" min="10" max="100" value="90" step="1">
+                        </div>
+                        
+                        <div class="control-group">
+                            <label>
+                                <input type="checkbox" id="compressImages" checked>
+                                Compress images for smaller file size
+                            </label>
+                        </div>
+                        
+                        <button class="btn btn-primary" id="convertBtn" disabled>
+                            <i class="fas fa-sync-alt"></i> Convert to PDF
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Output Section -->
+                <div class="output-section">
+                    <h3>Preview & Download</h3>
+                    <div class="preview-container" id="previewContainer">
+                        <div class="preview-placeholder">
+                            <i class="fas fa-file-pdf text-4xl text-gray-300 mb-2"></i>
+                            <p>PDF preview will appear here</p>
+                        </div>
+                    </div>
+                    
+                    <div class="file-info" id="fileInfo">
+                        <p>Upload images to see file information</p>
+                    </div>
+                    
+                    <div class="output-actions">
+                        <button class="btn btn-primary" id="downloadBtn" disabled>
+                            <i class="fas fa-download"></i> Download PDF
+                        </button>
+                        <button class="btn btn-secondary" id="resetBtn">
+                            <i class="fas fa-redo"></i> Start Over
+                        </button>
+                    </div>
+                    
+                    <div class="tool-tips">
+                        <h4>Tips for Best Results:</h4>
+                        <ul>
+                            <li>Use high-resolution images for better quality</li>
+                            <li>For multiple images, they'll be ordered by filename</li>
+                            <li>Reduce margin for more image space</li>
+                            <li>Adjust quality based on your needs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Supported Formats -->
+    <section class="container">
+        <div class="formats-section">
+            <h3>Supported Image Formats</h3>
+            <div class="format-badges">
+                <span class="format-badge">JPG / JPEG</span>
+                <span class="format-badge">PNG</span>
+                <span class="format-badge">WebP</span>
+                <span class="format-badge">BMP</span>
+                <span class="format-badge">TIFF</span>
+                <span class="format-badge">GIF</span>
+                <span class="format-badge">SVG</span>
+                <span class="format-badge">ICO</span>
+            </div>
+            <p class="text-gray-600 dark:text-gray-400">
+                All formats are converted to high-quality PDF with proper color preservation.
+            </p>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="container">
+        <div class="faq-section">
+            <h3>Frequently Asked Questions</h3>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h4>Are my images uploaded to any server?</h4>
+                    <p>No. All processing happens 100% in your browser. Your images never leave your device.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Is there a limit on file size or number of images?</h4>
+                    <p>No limits. You can convert as many images as you want, of any size.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Will there be watermarks on my PDF?</h4>
+                    <p>No watermarks. Your PDF will be completely clean and professional.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Can I rearrange the order of images?</h4>
+                    <p>Yes. After uploading, you can drag and drop images to reorder them.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ad Unit -->
+    <div class="container">
+        <div class="ad-unit">
+            <div class="ad-label">Premium Tool • Free Forever</div>
+            <div class="ad-placeholder">
+                <i class="fas fa-ad text-4xl text-gray-300 mb-2"></i>
+                <p class="text-sm text-gray-500">Advertisement</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>PixelPerfect Pro</h3>
+                    <p>Professional image and PDF editing tools that work 100% in your browser.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Tools</h3>
+                    <ul class="footer-links">
+                        <li><a href="image-to-pdf.html">Image to PDF</a></li>
+                        <li><a href="image-resizer.html">Image Resizer</a></li>
+                        <li><a href="pdf-compressor.html">PDF Compressor</a></li>
+                        <li><a href="bg-remover.html">Background Remover</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="../pages/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../pages/terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect</h3>
+                    <ul class="footer-links">
+                        <li><a href="../pages/contact.html">Contact</a></li>
+                        <li><a href="../pages/about.html">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PixelPerfect Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../script.js"></script>
+    <script>
+        // Image to PDF specific functionality
+        class ImageToPDFConverter {
+            constructor() {
+                this.files = [];
+                this.pdfBlob = null;
+                this.init();
+            }
+            
+            init() {
+                this.setupFileUpload();
+                this.setupControls();
+                this.setupEvents();
+            }
+            
+            setupFileUpload() {
+                const uploadArea = document.getElementById('uploadArea');
+                const fileInput = document.getElementById('fileInput');
+                
+                uploadArea.addEventListener('click', () => fileInput.click());
+                uploadArea.addEventListener('dragover', (e) => {
+                    e.preventDefault();
+                    uploadArea.style.backgroundColor = 'rgba(79, 70, 229, 0.1)';
+                });
+                uploadArea.addEventListener('dragleave', () => {
+                    uploadArea.style.backgroundColor = '';
+                });
+                uploadArea.addEventListener('drop', (e) => {
+                    e.preventDefault();
+                    uploadArea.style.backgroundColor = '';
+                    const files = Array.from(e.dataTransfer.files);
+                    this.handleFiles(files);
+                });
+                
+                fileInput.addEventListener('change', (e) => {
+                    const files = Array.from(e.target.files);
+                    this.handleFiles(files);
+                });
+            }
+            
+            handleFiles(files) {
+                this.files = files.filter(file => file.type.startsWith('image/'));
+                
+                if (this.files.length === 0) {
+                    this.showToast('Please select valid image files', 'error');
+                    return;
+                }
+                
+                this.updateFileList();
+                this.updateFileInfo();
+                document.getElementById('convertBtn').disabled = false;
+                this.showToast(`Loaded ${this.files.length} image(s)`, 'success');
+            }
+            
+            updateFileList() {
+                const fileList = document.getElementById('fileList');
+                fileList.innerHTML = this.files.map((file, index) => `
+                    <div class="file-item" data-index="${index}">
+                        <div class="file-info">
+                            <i class="fas fa-image"></i>
+                            <span>${file.name} (${this.formatBytes(file.size)})</span>
+                        </div>
+                        <button class="file-remove" data-index="${index}">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                `).join('');
+                
+                // Add remove event listeners
+                document.querySelectorAll('.file-remove').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const index = parseInt(e.target.closest('.file-remove').dataset.index);
+                        this.files.splice(index, 1);
+                        this.updateFileList();
+                        this.updateFileInfo();
+                    });
+                });
+            }
+            
+            updateFileInfo() {
+                const fileInfo = document.getElementById('fileInfo');
+                if (this.files.length === 0) {
+                    fileInfo.innerHTML = '<p>Upload images to see file information</p>';
+                    return;
+                }
+                
+                const totalSize = this.files.reduce((sum, file) => sum + file.size, 0);
+                const sizeMB = (totalSize / (1024 * 1024)).toFixed(2);
+                
+                fileInfo.innerHTML = `
+                    <div class="file-stats">
+                        <div class="stat-row">
+                            <span>Files:</span>
+                            <strong>${this.files.length}</strong>
+                        </div>
+                        <div class="stat-row">
+                            <span>Total Size:</span>
+                            <strong>${sizeMB} MB</strong>
+                        </div>
+                        <div class="stat-row">
+                            <span>Estimated PDF Size:</span>
+                            <strong>${(sizeMB * 0.7).toFixed(2)} MB</strong>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            async convertToPDF() {
+                if (this.files.length === 0) {
+                    this.showToast('Please upload images first', 'error');
+                    return;
+                }
+                
+                const { jsPDF } = window.jspdf;
+                const pdf = new jsPDF();
+                const pageSize = document.getElementById('pageSize').value;
+                const orientation = document.getElementById('orientation').value;
+                const margin = parseInt(document.getElementById('margin').value);
+                const quality = parseInt(document.getElementById('imageQuality').value) / 100;
+                
+                this.showLoading(true);
+                
+                try {
+                    for (let i = 0; i < this.files.length; i++) {
+                        if (i > 0) pdf.addPage();
+                        
+                        const file = this.files[i];
+                        const img = await this.loadImage(file);
+                        
+                        let pageWidth, pageHeight;
+                        
+                        switch(pageSize) {
+                            case 'a4': pageWidth = 210; pageHeight = 297; break;
+                            case 'letter': pageWidth = 215.9; pageHeight = 279.4; break;
+                            case 'legal': pageWidth = 215.9; pageHeight = 355.6; break;
+                            case 'a3': pageWidth = 297; pageHeight = 420; break;
+                            case 'a5': pageWidth = 148; pageHeight = 210; break;
+                            case 'fit': 
+                                pageWidth = img.width * 0.264583; // Convert pixels to mm
+                                pageHeight = img.height * 0.264583;
+                                break;
+                            default: pageWidth = 210; pageHeight = 297;
+                        }
+                        
+                        if (orientation === 'landscape' && pageSize !== 'fit') {
+                            [pageWidth, pageHeight] = [pageHeight, pageWidth];
+                        } else if (orientation === 'auto' && img.width > img.height) {
+                            [pageWidth, pageHeight] = [pageHeight, pageWidth];
+                        }
+                        
+                        const usableWidth = pageWidth - (margin * 2);
+                        const usableHeight = pageHeight - (margin * 2);
+                        
+                        let imgWidth = usableWidth;
+                        let imgHeight = (img.height * usableWidth) / img.width;
+                        
+                        if (imgHeight > usableHeight) {
+                            imgHeight = usableHeight;
+                            imgWidth = (img.width * usableHeight) / img.height;
+                        }
+                        
+                        const x = margin + (usableWidth - imgWidth) / 2;
+                        const y = margin + (usableHeight - imgHeight) / 2;
+                        
+                        pdf.addImage(img, 'JPEG', x, y, imgWidth, imgHeight, undefined, 'FAST');
+                    }
+                    
+                    const pdfBlob = pdf.output('blob');
+                    this.pdfBlob = pdfBlob;
+                    
+                    this.showPreview(pdfBlob);
+                    document.getElementById('downloadBtn').disabled = false;
+                    this.showToast('PDF created successfully!', 'success');
+                    
+                } catch (error) {
+                    console.error('Error creating PDF:', error);
+                    this.showToast('Failed to create PDF', 'error');
+                } finally {
+                    this.showLoading(false);
+                }
+            }
+            
+            loadImage(file) {
+                return new Promise((resolve, reject) => {
+                    const img = new Image();
+                    const reader = new FileReader();
+                    
+                    reader.onload = (e) => {
+                        img.src = e.target.result;
+                        img.onload = () => resolve(img);
+                        img.onerror = reject;
+                    };
+                    
+                    reader.onerror = reject;
+                    reader.readAsDataURL(file);
+                });
+            }
+            
+            showPreview(pdfBlob) {
+                const preview = document.getElementById('previewContainer');
+                const url = URL.createObjectURL(pdfBlob);
+                
+                preview.innerHTML = `
+                    <iframe src="${url}" style="width: 100%; height: 100%; border: none;"></iframe>
+                `;
+            }
+            
+            downloadPDF() {
+                if (!this.pdfBlob) return;
+                
+                const url = URL.createObjectURL(this.pdfBlob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `converted-${Date.now()}.pdf`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            }
+            
+            setupControls() {
+                // Margin slider
+                const marginSlider = document.getElementById('margin');
+                const marginValue = document.getElementById('marginValue');
+                marginSlider.addEventListener('input', () => {
+                    marginValue.textContent = `${marginSlider.value} mm`;
+                });
+                
+                // Quality slider
+                const qualitySlider = document.getElementById('imageQuality');
+                const qualityValue = document.getElementById('qualityValue');
+                qualitySlider.addEventListener('input', () => {
+                    qualityValue.textContent = `${qualitySlider.value}%`;
+                });
+                
+                // Convert button
+                document.getElementById('convertBtn').addEventListener('click', () => {
+                    this.convertToPDF();
+                });
+                
+                // Download button
+                document.getElementById('downloadBtn').addEventListener('click', () => {
+                    this.downloadPDF();
+                });
+                
+                // Reset button
+                document.getElementById('resetBtn').addEventListener('click', () => {
+                    this.files = [];
+                    this.pdfBlob = null;
+                    document.getElementById('fileList').innerHTML = '';
+                    document.getElementById('fileInfo').innerHTML = '<p>Upload images to see file information</p>';
+                    document.getElementById('previewContainer').innerHTML = `
+                        <div class="preview-placeholder">
+                            <i class="fas fa-file-pdf text-4xl text-gray-300 mb-2"></i>
+                            <p>PDF preview will appear here</p>
+                        </div>
+                    `;
+                    document.getElementById('convertBtn').disabled = true;
+                    document.getElementById('downloadBtn').disabled = true;
+                });
+            }
+            
+            setupEvents() {
+                // Theme toggle
+                document.getElementById('themeToggle').addEventListener('click', () => {
+                    document.body.classList.toggle('dark');
+                    const icon = document.querySelector('#themeToggle i');
+                    if (document.body.classList.contains('dark')) {
+                        icon.className = 'fas fa-sun';
+                    } else {
+                        icon.className = 'fas fa-moon';
+                    }
+                });
+            }
+            
+            showLoading(show) {
+                const convertBtn = document.getElementById('convertBtn');
+                if (show) {
+                    convertBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Converting...';
+                    convertBtn.disabled = true;
+                } else {
+                    convertBtn.innerHTML = '<i class="fas fa-sync-alt"></i> Convert to PDF';
+                    convertBtn.disabled = false;
+                }
+            }
+            
+            showToast(message, type = 'info') {
+                const toast = document.createElement('div');
+                toast.className = `toast toast-${type}`;
+                toast.innerHTML = `
+                    <i class="fas fa-${type === 'success' ? 'check-circle' : 'info-circle'}"></i>
+                    <span>${message}</span>
+                `;
+                
+                document.body.appendChild(toast);
+                
+                setTimeout(() => {
+                    toast.classList.add('show');
+                }, 100);
+                
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                    setTimeout(() => {
+                        if (toast.parentNode) {
+                            toast.parentNode.removeChild(toast);
+                        }
+                    }, 300);
+                }, 3000);
+            }
+            
+            formatBytes(bytes, decimals = 2) {
+                if (bytes === 0) return '0 Bytes';
+                const k = 1024;
+                const dm = decimals < 0 ? 0 : decimals;
+                const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+                const i = Math.floor(Math.log(bytes) / Math.log(k));
+                return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
+            }
+        }
+        
+        // Initialize converter
+        window.addEventListener('DOMContentLoaded', () => {
+            window.converter = new ImageToPDFConverter();
+        });
+    </script>
+</body>
+</html>
