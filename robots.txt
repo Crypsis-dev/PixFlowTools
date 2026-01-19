@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pixflowtools.com/sitemap.xml
+
+# SEO directives
+Disallow: /private/
+Disallow: /tmp/
+
+# Crawl-delay for bots (optional)
+Crawl-delay: 1
