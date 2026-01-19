@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixFlowTools - Free Image & PDF Editor | No Upload, All Processing in Browser</title>
+    <meta name="description" content="Free image to PDF converter, image resizer, PDF compressor, background remover. All tools work 100% in your browser - no upload, no server processing, private & fast.">
+    <meta name="keywords" content="image to pdf, pdf converter, image resizer, compress pdf, remove background, photo editor">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛠️</text></svg>">
+    <!-- Google Analytics placeholder -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>🛠️ PixFlowTools</h1>
+                <p class="tagline">All-in-One Image & PDF Editor • 100% Client-Side • Free Forever</p>
+            </div>
+            <nav>
+                <a href="#tools" class="nav-link active">Tools</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#how" class="nav-link">How It Works</a>
+                <button id="dark-mode-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Process Images & PDFs <span class="highlight">100% in Your Browser</span></h2>
+            <p class="subtitle">No uploads, no server processing, your files never leave your computer. Fast, private, and works offline.</p>
+            
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Client-Side</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">∞</span>
+                    <span class="stat-label">Unlimited Use</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">⚡</span>
+                    <span class="stat-label">Instant</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">🔒</span>
+                    <span class="stat-label">Private</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Grid -->
+    <section id="tools" class="tools-section">
+        <div class="container">
+            <h2 class="section-title">Choose Your Tool</h2>
+            <p class="section-subtitle">All tools work completely in your browser. No data is sent to any server.</p>
+            
+            <div class="tools-grid">
+                <!-- Image to PDF -->
+                <div class="tool-card" data-tool="image-to-pdf">
+                    <div class="tool-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h3>Image to PDF</h3>
+                    <p>Convert JPG, PNG, WebP images to PDF. Multiple images = multi-page PDF.</p>
+                    <button class="tool-btn">Use Tool</button>
+                </div>
+
+                <!-- Image Resizer -->
+                <div class="tool-card" data-tool="image-resizer">
+                    <div class="tool-icon">
+                        <i class="fas fa-expand-alt"></i>
+                    </div>
+                    <h3>Image Resizer</h3>
+                    <p>Resize images by pixels, percentage, or preset dimensions. Maintain quality.</p>
+                    <button class="tool-btn">Use Tool</button>
+                </div>
+
+                <!-- PDF Compressor -->
+                <div class="tool-card" data-tool="pdf-compressor">
+                    <div class="tool-icon">
+                        <i class="fas fa-compress-alt"></i>
+                    </div>
+                    <h3>PDF Compressor</h3>
+                    <p>Reduce PDF file size without quality loss. Perfect for email attachments.</p>
+                    <button class="tool-btn">Use Tool</button>
+                </div>
+
+                <!-- Background Remover -->
+                <div class="tool-card" data-tool="bg-remover">
+                    <div class="tool-icon">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h3>BG Remover</h3>
+                    <p>Remove background from images automatically. Uses AI in browser.</p>
+                    <button class="tool-btn">Use Tool</button>
+                </div>
+
+                <!-- PDF to Images -->
+                <div class="tool-card" data-tool="pdf-to-images">
+                    <div class="tool-icon">
+                        <i class="fas fa-images"></i>
+                    </div>
+                    <h3>PDF to Images</h3>
+                    <p>Extract images from PDF or convert PDF pages to JPG/PNG.</p>
+                    <button class="tool-btn">Use Tool</button>
+                </div>
+
+                <!-- Image Compressor -->
+                <div class="tool-card" data-tool="image-compressor">
+                    <div class="tool-icon">
+                        <i class="fas fa-file-image"></i>
+                    </div>
+                    <h3>Image Compressor</h3>
+                    <p>Compress JPG, PNG, WebP images with adjustable quality settings.</p>
+                    <button class="tool-btn">Use Tool</button>
+                </div>
+
+                <!-- Document Scanner -->
+                <div class="tool-card" data-tool="document-scanner">
+                    <div class="tool-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Document Scanner</h3>
+                    <p>Enhance document photos: remove shadows, straighten, improve text.</p>
+                    <button class="tool-btn">Use Tool</button>
+                </div>
+
+                <!-- PDF Merger -->
+                <div class="tool-card" data-tool="pdf-merger">
+                    <div class="tool-icon">
+                        <i class="fas fa-copy"></i>
+                    </div>
+                    <h3>PDF Merger</h3>
+                    <p>Combine multiple PDF files into one. Reorder pages as needed.</p>
+                    <button class="tool-btn">Use Tool</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tool Interface Area -->
+    <section id="tool-interface" class="tool-interface" style="display: none;">
+        <div class="container">
+            <div class="tool-header">
+                <button id="back-to-tools" class="back-btn">
+                    <i class="fas fa-arrow-left"></i> Back to Tools
+                </button>
+                <h2 id="current-tool-title">Tool Title</h2>
+            </div>
+            
+            <div class="tool-container">
+                <!-- This will be populated by JavaScript -->
+                <div id="tool-content">
+                    <div class="loading">
+                        <div class="spinner"></div>
+                        <p>Loading tool...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Why PixFlowTools?</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">🔒</div>
+                    <h3>100% Private</h3>
+                    <p>Your files never leave your computer. All processing happens in your browser.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Lightning Fast</h3>
+                    <p>No upload/download delays. Process files instantly on your device.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📱</div>
+                    <h3>Works Offline</h3>
+                    <p>Once loaded, all tools work without internet connection. Install as PWA.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">💸</div>
+                    <h3>Free Forever</h3>
+                    <p>No signup, no limits, no watermarks. We believe in free tools for everyone.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how" class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Choose Tool</h3>
+                    <p>Select from 8+ specialized image & PDF tools</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Upload File</h3>
+                    <p>Drag & drop or select files from your device</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Process in Browser</h3>
+                    <p>Magic happens 100% in your browser - no servers</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Download Result</h3>
+                    <p>Get your processed file instantly. No watermarks!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>🛠️ PixFlowTools</h3>
+                    <p>Free, private, client-side image & PDF tools</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">Privacy Policy</a>
+                    <a href="#" class="footer-link">Terms of Use</a>
+                    <a href="#" class="footer-link">Contact</a>
+                    <a href="https://github.com/yourusername/pixflow-tools" class="footer-link" target="_blank">GitHub</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 PixFlowTools.com • All processing happens in your browser • No data is collected</p>
+                <p class="disclaimer">Note: For very large files (>50MB), browser performance may vary. All tools use client-side JavaScript libraries.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Upload Modal -->
+    <div id="upload-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Upload Files</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="drop-zone" id="drop-zone">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <p>Drag & drop files here</p>
+                    <p class="drop-sub">or click to browse</p>
+                    <input type="file" id="file-input" multiple style="display: none;">
+                </div>
+                <div id="file-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@techstark/opencv-js@4.8.0/opencv.js" async></script>
+    <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+    <script src="script.js"></script>
+    
+    <!-- PWA Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+        
+        // Install button
+        let deferredPrompt;
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+        });
+    </script>
+</body>
+</html>
